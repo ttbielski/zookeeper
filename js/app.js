@@ -120,3 +120,21 @@ Switching on the camera in the rabbit habitat...
  ]\\      _\\    /"\\
 (" ~----( ~   Y.  )
 It looks like we will soon have more rabbits!`;
+
+const startBtn = document.querySelector('#start-app');
+const habitats = [camel, lion, deer, goose, bat, rabbit];
+
+startBtn.addEventListener('click', () => {
+  while (true) {
+    let userAnswer = prompt('Which habitat # do you need?');
+
+    if (userAnswer === null || userAnswer.toLowerCase() === 'exit') {
+      console.log('See you later!');
+      break;
+    } else {
+      console.log(habitats[userAnswer]);
+    }
+  }
+});
+
+
